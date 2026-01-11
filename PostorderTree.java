@@ -7,13 +7,13 @@ Node(int value){
     left=right=null;
 }}
 public class PostorderTree{
-    public static void preorder(Node root){
+    public static void tree(Node root){
         if(root==null){
             return;
         }
         //postorder
-       preorder(root.left);
-        preorder(root.right);
+      tree(root.left);
+        tree(root.right);
         System.out.println(root.key);
     }
     public static void main(String[]args){
@@ -24,6 +24,6 @@ public class PostorderTree{
          root.left.right =new Node(50);
          root.right.left= new Node(60);
          root.right.right= new Node(70);
-         preorder(root);
+        tree(root);
     }
 }
