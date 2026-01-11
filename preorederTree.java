@@ -6,7 +6,7 @@ Node(int value){
     key = value;
     left=right=null;
 }}
-public class postorederTree{
+public class preorederTree{
     public static void preorder(Node root){
         if(root==null){
             return;
